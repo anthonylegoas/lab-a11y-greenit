@@ -1,0 +1,8 @@
+{
+  "name": "lab-a11y-greenit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:anthonylegoas/lab-a11y-greenit.git",
+  "author": "Anthony Le Goas <anthony.legoas@gmail.com>",
+  "license": "MIT"
+}
