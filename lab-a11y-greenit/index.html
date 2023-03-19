@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>How to Write a Codelab</title>
+  <title>Découvrir l&#39;accessibilité web &amp; l&#39;eco-conception par la pratique</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
@@ -23,63 +23,101 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="lab-a11y-greenit"
-                  title="How to Write a Codelab"
+                  title="Découvrir l&#39;accessibilité web &amp; l&#39;eco-conception par la pratique"
                   environment="web"
                   feedback-link="">
     
-      <google-codelab-step label="Overview" duration="1">
-        <h2 class="checklist" is-upgraded>What You&#39;ll Learn</h2>
-<ul class="checklist">
-<li>how to set the amount of time each slide will take to finish</li>
-<li>how to include code snippets</li>
-<li>how to hyperlink items</li>
-<li>how to include images</li>
-<li>other stuff</li>
-</ul>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Setting Duration" duration="2">
-        <p>To indicate how long each slide will take to go through, set the <code>Duration</code> under each Heading 2 (i.e. <code>##</code>) to an integer. The integers refer to minutes. If you set <code>Duration: 4</code> then a particular slide will take 4 minutes to complete.</p>
-<p>The total time will automatically be calculated for you and will be displayed on the codelab once you create it.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Code Snippets" duration="3">
-        <p>To include code snippets you can do a few things.</p>
+      <google-codelab-step label="Objectifs" duration="1">
+        <h2 is-upgraded>Vous allez apprendre à :</h2>
 <ul>
-<li>Inline highlighting can be done using the tiny tick mark on your keyboard: &#34;`&#34;</li>
-<li>Embedded code</li>
+<li>Utiliser un lecteur d&#39;écran</li>
+<li>Identifier des problèmes d&#39;accessibilité via des outils d&#39;audit</li>
+<li>Corriger certaines erreurs d&#39;accessibilité</li>
+<li>Identifier des problèmes d&#39;éco-conception via des outils d&#39;audit</li>
+<li>Corriger certaines erreurs d&#39;eco-conception</li>
 </ul>
-<h2 is-upgraded>JavaScript</h2>
-<pre><code language="language-javascript" class="language-javascript">{ 
-  key1: &#34;string&#34;, 
-  key2: integer,
-  key3: &#34;string&#34;
-}
-</code></pre>
-<h2 is-upgraded>Java</h2>
-<pre><code language="language-java" class="language-java">for (statement 1; statement 2; statement 3) {
-  // code block to be executed
-}
-</code></pre>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Hyperlinking and Embedded Images" duration="1">
-        <h2 is-upgraded>Hyperlinking</h2>
-<p><a href="https://www.youtube.com/user/iamhalsey/playlists" target="_blank">Youtube - Halsey Playlists</a></p>
-<h2 is-upgraded>Images</h2>
-<p class="image-container"><img alt="alt-text-here" src="img/bb13fd19d63c89ef.png"></p>
+      <google-codelab-step label="Pré-requis accessibilité" duration="10">
+        <h2 is-upgraded>Outils nécessaires pour réaliser les exercices</h2>
+<ul>
+<li>Google Chrome</li>
+<li>VSCode</li>
+<li>VSCode Live Server</li>
+<li>Lighthouse</li>
+<li>Wave</li>
+<li>Axe DevTools</li>
+</ul>
+<p>Pour découvrir l&#39;accessibilité par la pratique, nous vous proposons</p>
+<p>Suivez scrupulesement les intructions suivantes pour être sûr de pouvoir réaliser les exercices sans rencontrer de problème.</p>
+<h2 is-upgraded>Google Chrome</h2>
+<p>Vous aurez besoin du navigateur web Google Chrome pour réaliser les exercices car c&#39;est au travers d&#39;extensions Google Chrome que vous pourrez tester un lecteur d&#39;écran et que vous pourrez mener des audits d&#39;accessibilité. Si vous ne l&#39;avez pas sur votre PC, rendez-vous <a href="https://www.google.com/intl/fr/chrome" target="_blank">ici</a> pour l&#39;installer.</p>
+<h2 is-upgraded>VS Code</h2>
+<p>Une fois les problèmes d&#39;accessibilité identifiés, vous aurez à les corriger en modifiant le code du projet dans VS Code. Vous pouvez télécharger VS Code <a href="https://code.visualstudio.com/download" target="_blank">ici</a>.</p>
+<h2 is-upgraded>VS Code Live Server</h2>
+<p>Pour pouvoir lancer le projet qui servira d&#39;exemple et mener des audits d&#39;accessibilité, il est nécessaire d&#39;installer l&#39;extension VS Code Live Server. Pour ce faire, commencez par lancer VS Code. Ensuite, dans le menu de gauche de VS Code, sélectionnez l&#39;onglet <strong>Extensions</strong>.</p>
+<p class="image-container"><img alt="onglet extensions vs code" src="img/c923b3b7c0d609f.png"></p>
+<p>Dans la barre de recherche, saisissez <strong>Liver Server</strong> et installez la première extension proposée.</p>
+<p class="image-container"><img alt="extension live server" src="img/52a54181ff2dc48f.png"></p>
+<h2 is-upgraded>Lighthouse</h2>
+<p>Lighthouse est une extension qui permet de mener différents types d&#39;audits sur un site web, incluant notamment un certain nombres de vérifications relatives à l&#39;accessibilité (mais aussi aux performances, au SEO, etc).</p>
+<p>Lighthouse est nativement disponible dans Google Chrome. Pour y accéder, faites un <strong>clic droit</strong> sur une page internet et sélectionnez <strong>inspecter</strong> dans le menu qui s&#39;affiche.</p>
+<p class="image-container"><img alt="menu contextuel chrome" src="img/e0dccc85b6486e95.png"></p>
+<p>Ensuite, accéder à l&#39;onglet <strong>Lighthouse</strong></p>
+<p class="image-container"><img alt="onglet chrome lighthouse" src="img/e2b42c905e3f5deb.png"></p>
+<p>Depuis cet onglet, vous pouvez maintenant lancer des audits Lightouse.</p>
+<p class="image-container"><img alt="audit lighthouse" src="img/33591370374fd479.png"></p>
+<h2 is-upgraded>Wave</h2>
+<p>todo https://wave.webaim.org/extension/</p>
+<h2 is-upgraded>Axe DevTools</h2>
+<p>todo</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Other Stuff" duration="1">
-        <p>Checkout the official documentation here: <a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">Codelab Formatting Guide</a></p>
+      <google-codelab-step label="Projet exemple" duration="0">
+        <p>Vous allez utiliser un projet exemple pour découvrir l&#39;accessibilité, mener des audits et appliquer des corrections suite aux retours d&#39;audit. Ce projet est à télécharger sur le lien suivant :</p>
+<p>Une fois le .zip récupéré, dézippez le dans le répertoire de votre choix sur votre PC.</p>
+<p>Lancez le projet... todo</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Connexion : à l&#39;aveugle" duration="30">
+        <p>Vous allez à présent vous mettre à la place d&#39;une personne non-voyante utilisant un site internet. Vous allez avoir à remplir un formulaire du connexion (utilisateur + mot de passe) et tenter de vous connecter via le bouton <strong>Se connecter</strong>. Puisque vous ne verez pas l&#39;écran, vous serez guidé par le lecteur d&#39;écran.</p>
+<h2 is-upgraded>Activez le lecteur d&#39;écran</h2>
+<p>Mettez vos écouteurs ou votre casque pour ne pas gêner vos voisins. Activer l&#39;extension ... todo</p>
+<h2 is-upgraded>Accédez à la page de connexion</h2>
+<p>Dans votre navigateur accéder à la page de connexion du projet.</p>
+<h2 is-upgraded>À l&#39;aveugle</h2>
+<p>Saisissez le masque qui vous a été donné, portez-le et essayez de vous connecter. Les identifiants de connexion sont les suivants :</p>
+<ul>
+<li>Utilisateur : to do</li>
+<li>Mot de passe : to do</li>
+</ul>
+<p>C&#39;est parti !</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Connexion : audits &amp; corrections" duration="0">
+        <p>to do</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Pré-requis éco-conception" duration="10">
+        <h2 is-upgraded>Outils nécessaires pour réaliser les exercices</h2>
+<ul>
+<li>Google Chrome</li>
+<li>GreenIT Analysis</li>
+</ul>
+<h2 is-upgraded>Google Chrome</h2>
+<p>Vous aurez besoin du navigateur web Google Chrome pour réaliser les exercices. C&#39;est au travers d&#39;extensions Google Chrome que vous pourrez tester un  mener des audits d&#39;éco-conception. Si vous ne l&#39;avez pas sur votre PC, rendez-vous <a href="https://www.google.com/intl/fr/chrome" target="_blank">ici</a> pour l&#39;installer.</p>
+<h2 is-upgraded>GreenIT Analysis</h2>
+<p>to do</p>
 
 
       </google-codelab-step>
