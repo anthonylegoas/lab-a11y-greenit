@@ -56,47 +56,97 @@ Dans la barre de recherche, saisissez **Liver Server** et installez la première
 
 Lighthouse est une extension qui permet de mener différents types d'audits sur un site web, incluant notamment un certain nombres de vérifications relatives à l'accessibilité (mais aussi aux performances, au SEO, etc).
 
-Lighthouse est nativement disponible dans Google Chrome. Pour y accéder, faites un **clic droit** sur une page internet et sélectionnez **inspecter** dans le menu qui s'affiche.
+Lighthouse est nativement disponible dans Google Chrome. Pour accéder à l'outil, rendez-vous en haut à droite de votre navigateur, sur le menu **Extensions**.
 
-![menu contextuel chrome](assets/chrome-menu-contextuel.png)
+![menu extension de Google Chrome](assets/chrome-menu-extensions.png)
 
-Ensuite, accéder à l'onglet **Lighthouse**
+Ensuite, cliquez sur **Lighthouse**.
 
-![onglet chrome lighthouse](assets/chrome-onglet-lighthouse.png)
+![extension de navigateur lighthouse](assets/chrome-extension-lighthouse.png)
 
-Depuis cet onglet, vous pouvez maintenant lancer des audits Lighthouse.
+Une fenêtre s'affiche alors et vous pouvez lancer un audit lighthouse en cliquant sur le bouton **Generate report**.
 
 ![audit lighthouse](assets/lighthouse.png)
 
-### Wave
+Les résultats de l'audit s'afficheront dans un nouvel onglet de votre navigateur.
 
-todo
-https://wave.webaim.org/extension/
+![audit lighthouse](assets/lighthouse-report.png)
+
+### WAVE Evaluation Tool
+
+WAVE Evaluation Tool est un outil permettant de lancer des audits d'accessibilité dans un navigateur. Il est disponible au travers d'une extension de navigateur.
+
+Vous pouvez ajouter l'extension à Google Chrome à partir du lien suivant : [WAVE Evaluation Tool](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
+
+Pour accéder à l'outil, rendez-vous en haut à droite de votre navigateur, sur le menu **Extensions**.
+
+![menu extension de Google Chrome](assets/chrome-menu-extensions.png)
+
+Cliquez ensuite sur **WAVE Evaluation Tool** pour lancer un audit.
+
+![extension de navigateur wave](assets/chrome-extension-wave.png)
+
+Les résultats s'afficheront ensuite directement sur la page web : 
+
+![audit wave evaluation tool](assets/wave-audit.png)
 
 ### Axe DevTools
 
-todo
+Axe DevTools est un outil permettant de lancer des audits d'accessibilité dans un navigateur. Il est disponible au travers d'une extension de navigateur.
+
+Vous pouvez ajouter l'extension à Google Chrome à partir du lien suivant : [Axe DevTools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+
+Pour y accéder, ouvrez les DevTools du navigateur (appuyez sur **F12**).
+
+Ensuite, dans le menu suivant, accéder à l'onglet **axe DevTools**.
+
+![extension de navigateur axe DevTools](assets/access-axe.png)
+
+Pour lancer un audit sur la page entière, cliquez sur le bouton `Scan ALL of my page`: 
+
+![audit axe devtools](assets/axe-audit.png)
+
+Les resultats s'affichent ensuite dans les DevTools.
+
+### Screen Reader
+
+L'extension de navigateur **Screen Reader** est un lecteur d'écran pour navigateur. Un lecteur d'écran est un logiciel d’assistance technique destiné aux personnes « empêchées de lire » (aveugles, fortement malvoyantes, dyslexiques, dyspraxiques…) : il retranscrit par synthèse vocale et/ou sur un afficheur braille ce qui est affiché sur l'écran d'un ordinateur tant en termes de contenu que de structure.
+
+Vous pouvez ajouter l'extension à Google Chrome à partir du lien suivant : [Screen Reader](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=fr)
+
+Pour l'activer, il vous faudra ensuite passer par le menu **Extensions** puis **Gérer les extensions** de Google Chrome.
+
+⚠ Attention ! Dès lors que vous activez l'extension, toute action que vous ferez dans votre navigateur risque d'entrainer la prise de parole du lecteur d'écran, donc mettez vos écouteurs.
+
+[activation du lecteur d'écran](assets/screen-reader.png).
 
 ## Projet exemple
+Duration: 5
 
-Vous allez utiliser un projet exemple pour découvrir l'accessibilité, mener des audits et appliquer des corrections suite aux retours d'audit.
-Ce projet est à télécharger sur le lien suivant : 
+Vous allez utiliser un projet exemple pour découvrir l'accessibilité par la pratique, en menant des audits avec les outils installés précédement et vous pourrez appliquer des corrections suite aux retours des audits.
 
-Une fois le .zip récupéré, dézippez le dans le répertoire de votre choix sur votre PC.
+### Télécharger le projet
 
-Lancez le projet... todo
+Le projet exemple est à télécharger sur le lien suivant : 
+
+Récupérez le .zip puis dézippez le dans le répertoire de votre choix sur votre PC.
+
+### Lancer le projet en local
+
+Pour lancer le projet en local, sur votre PC, réalisez les opérations suivantes :
 
 <!-- ------------------------ -->
 ## Connexion : à l'aveugle
 Duration: 30
 
 Vous allez à présent vous mettre à la place d'une personne non-voyante utilisant un site internet.
-Vous allez avoir à remplir un formulaire du connexion (utilisateur + mot de passe) et tenter de vous connecter via le bouton **Se connecter**. Puisque vous ne verez pas l'écran, vous serez guidé par le lecteur d'écran.
+Vous allez avoir à remplir le formulaire du connexion du projet exemple (utilisateur + mot de passe) et vous tenterez de vous connecter via le bouton **Se connecter**. Puisque vous ne verez pas l'écran, vous serez guidé par le lecteur d'écran.
 
 ### Activez le lecteur d'écran
 
 Mettez vos écouteurs ou votre casque pour ne pas gêner vos voisins.
-Activer l'extension ... todo
+
+Activer l'extension ***Screen Reader**.
 
 ### Accédez à la page de connexion
 
@@ -105,27 +155,91 @@ Dans votre navigateur accéder à la page de connexion du projet.
 ### À l'aveugle
 
 Saisissez le masque qui vous a été donné, portez-le et essayez de vous connecter.
+Etant hôté de la vue, vous serez contraint d'utiliser uniquement les touches du clavier : **tabulation**, **entrée**, ...
+
 Les identifiants de connexion sont les suivants :
 - Utilisateur : to do
 - Mot de passe : to do
 
 C'est parti !
 
-## Connexion : audits & corrections
+Désactivez le lecteur d'écran quand vous avez réussi.
 
-to do 
+## Connexion : audits & corrections
+Duration: 30
+
+Vous l'aurez-vu avec le lecteur d'écran, le formulaire de connexion n'est pas accessible du tout, impossible de se connecter en utilisant seulement son clavier.
+
+Vous allez maintenant rendre cette page beaucoup plus accessible à tous.
+Pour ce faire, lancez les outils d'audit d'accessibilité installés précédemment, identifiez les problèmes et corrigez les directement en modifiant le code de la page.
+
+Répétez l'opération jusqu'à ce que les 3 outils d'audit ne remontent plus aucune erreur.
+
+## Blog : à l'aveugle
+Duration: 30
+
+Vous allez à présent vous mettre à la place d'une personne non-voyante naviguant sur un blog.
+
+### Activez le lecteur d'écran
+
+Mettez vos écouteurs ou votre casque pour ne pas gêner vos voisins.
+
+Activer l'extension ***Screen Reader**.
+
+### Accédez à la page de blog
+
+Dans votre navigateur accéder à la page de blog.
+
+### À l'aveugle
+
+Saisissez le masque qui vous a été donné, portez-le et tentez d'accéder à l'article **TO DO** .
+Etant hôté de la vue, vous serez contraint d'utiliser uniquement les touches du clavier : **tabulation**, **entrée**, ...
+
+C'est parti !
+
+Désactivez le lecteur d'écran quand vous avez réussi.
+
+## Connexion : audits & corrections
+Duration: 30
+
+Vous allez maintenant rendre cette page beaucoup plus accessible à tous.
+Pour ce faire, lancez les outils d'audit d'accessibilité installés précédemment, identifiez les problèmes et corrigez les directement en modifiant le code de la page.
+
+Répétez l'opération jusqu'à ce que les 3 outils d'audit ne remontent plus aucune erreur.
+
 ## Pré-requis éco-conception
-Duration: 10
+Duration: 5
 
 ### Outils nécessaires pour réaliser les exercices
-- Google Chrome
 - GreenIT Analysis
-
-### Google Chrome
-
-Vous aurez besoin du navigateur web Google Chrome pour réaliser les exercices. C'est au travers d'extensions Google Chrome que vous pourrez tester un  mener des audits d'éco-conception.
-Si vous ne l'avez pas sur votre PC, rendez-vous [ici](https://www.google.com/intl/fr/chrome) pour l'installer.
 
 ### GreenIT Analysis
 
-to do 
+**GreenIT Analysis** est un outil permettant de lancer des audits d'accessibilité dans un navigateur. Il est disponible au travers d'une extension de navigateur.
+
+Vous pouvez ajouter l'extension à Google Chrome à partir du lien suivant : [GreenIT Analysis](https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad?hl=fr)
+
+Pour y accéder, ouvrez les DevTools du navigateur (appuyez sur **F12**).
+
+Ensuite, dans le menu suivant, accéder à l'onglet **axe DevTools**.
+
+![extension de navigateur greenIT analysis](assets/green-access.png)
+
+Pour lancer un audit sur la page entière, cliquez sur le bouton **Lancer l'analyse**, et cochez la case **Activer l'analyse des bonnes pratiques**: 
+
+![audit greenIT analysis](assets/green-audit.png)
+
+Les resultats s'affichent ensuite dans les DevTools.
+
+## Audit d'éco-conception
+
+Testez l'extension GreenIT Analysis sur différents site web et analysez les résultats.
+
+Exemples de site web à analyser :
+- IMT Atlantique
+- Ali Express
+- ...
+
+Prenez le temps de lire chacune des bonnes pratiques d'éco-conception en cliquant sur chacune d'entre elles.
+
+![résultats d'audit d'éco-conception](assets/green-result.png)
