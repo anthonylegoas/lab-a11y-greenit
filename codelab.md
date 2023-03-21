@@ -13,11 +13,10 @@ Duration: 1
 - Identifier des problèmes d'accessibilité via des outils d'audit
 - Corriger certaines erreurs d'accessibilité
 - Identifier des problèmes d'éco-conception via des outils d'audit
-- Corriger certaines erreurs d'eco-conception
 
 <!-- ------------------------ -->
 ## Pré-requis accessibilité
-Duration: 10
+Duration: 15
 
 ### Outils nécessaires pour réaliser les exercices
 - Google Chrome
@@ -26,8 +25,6 @@ Duration: 10
 - Lighthouse 
 - Wave
 - Axe DevTools
-
-Pour découvrir l'accessibilité par la pratique, nous vous proposons
 
 Suivez scrupulesement les intructions suivantes pour être sûr de pouvoir réaliser les exercices sans rencontrer de problème.
 
@@ -48,13 +45,13 @@ Pour ce faire, commencez par lancer VS Code. Ensuite, dans le menu de gauche de 
 
 ![onglet extensions vs code](assets/vscode-extensions.png)
 
-Dans la barre de recherche, saisissez **Liver Server** et installez la première extension proposée.
+Dans la barre de recherche, saisissez **Live Server** et installez la première extension proposée.
 
 ![extension live server](assets/vscode-live-server.png)
 
 ### Lighthouse
 
-Lighthouse est une extension qui permet de mener différents types d'audits sur un site web, incluant notamment un certain nombres de vérifications relatives à l'accessibilité (mais aussi aux performances, au SEO, etc).
+Lighthouse est une extension qui permet de mener différents types d'audits sur un site web, incluant notamment un certain nombre de vérifications relatives à l'accessibilité (mais aussi aux performances, aux bonnes pratiques, au SEO et aux PWA).
 
 Lighthouse est nativement disponible dans Google Chrome. Pour accéder à l'outil, rendez-vous en haut à droite de votre navigateur, sur le menu **Extensions**.
 
@@ -116,9 +113,11 @@ Vous pouvez ajouter l'extension à Google Chrome à partir du lien suivant : [Sc
 
 Pour l'activer, il vous faudra ensuite passer par le menu **Extensions** puis **Gérer les extensions** de Google Chrome.
 
-⚠ Attention ! Dès lors que vous activez l'extension, toute action que vous ferez dans votre navigateur risque d'entrainer la prise de parole du lecteur d'écran, donc mettez vos écouteurs.
+Attention ! Dès lors que vous activez l'extension, toute action que vous ferez dans votre navigateur risque d'entrainer la prise de parole du lecteur d'écran, donc mettez vos écouteurs.
 
-[activation du lecteur d'écran](assets/screen-reader.png).
+![activation du lecteur d'écran](assets/screen-reader.png).
+
+![activation du lecteur d'écran étape 2](assets/screen-reader-2.png).
 
 ## Projet exemple
 Duration: 5
@@ -127,26 +126,30 @@ Vous allez utiliser un projet exemple pour découvrir l'accessibilité par la pr
 
 ### Télécharger le projet
 
-Le projet exemple est à télécharger sur le lien suivant : 
+Le projet exemple est à télécharger sur le lien suivant : [https://wetransfer.com/downloads/2d18dd1ea849d22698521307fcec085720230321003757/f39bf2](https://wetransfer.com/downloads/2d18dd1ea849d22698521307fcec085720230321003757/f39bf2)
 
 Récupérez le .zip puis dézippez le dans le répertoire de votre choix sur votre PC.
 
 ### Lancer le projet en local
 
 Pour lancer le projet en local, sur votre PC, réalisez les opérations suivantes :
+- ouvrez le projet dans VS Code
+- dans les sources du projet, faites un **clic droit** sur le fichier **index.html** et choisissez **Open with Five Server**.
+- un nouvel onglet Chrome devrait s'ouvrir sur l'adresse suivante : **http://127.0.0.1:5555/index.html**
+
 
 <!-- ------------------------ -->
 ## Connexion : à l'aveugle
-Duration: 30
+Duration: 15
 
 Vous allez à présent vous mettre à la place d'une personne non-voyante utilisant un site internet.
-Vous allez avoir à remplir le formulaire du connexion du projet exemple (utilisateur + mot de passe) et vous tenterez de vous connecter via le bouton **Se connecter**. Puisque vous ne verez pas l'écran, vous serez guidé par le lecteur d'écran.
+Vous allez avoir à remplir le formulaire du connexion du projet exemple (utilisateur + mot de passe) et vous tenterez de vous connecter. Puisque vous ne verez pas l'écran, vous serez guidé par le lecteur d'écran.
 
 ### Activez le lecteur d'écran
 
 Mettez vos écouteurs ou votre casque pour ne pas gêner vos voisins.
 
-Activer l'extension ***Screen Reader**.
+Activer l'extension **Screen Reader**.
 
 ### Accédez à la page de connexion
 
@@ -155,11 +158,11 @@ Dans votre navigateur accéder à la page de connexion du projet.
 ### À l'aveugle
 
 Saisissez le masque qui vous a été donné, portez-le et essayez de vous connecter.
-Etant hôté de la vue, vous serez contraint d'utiliser uniquement les touches du clavier : **tabulation**, **entrée**, ...
+Etant ôté de la vue, vous serez contraints d'utiliser uniquement les touches du clavier : **tabulation**, **entrée**, ...
 
 Les identifiants de connexion sont les suivants :
-- Utilisateur : to do
-- Mot de passe : to do
+- Utilisateur : `Specimen29`
+- Mot de passe : `SuPer@ccEssIblE!`
 
 C'est parti !
 
@@ -174,9 +177,12 @@ Vous allez maintenant rendre cette page beaucoup plus accessible à tous.
 Pour ce faire, lancez les outils d'audit d'accessibilité installés précédemment, identifiez les problèmes et corrigez les directement en modifiant le code de la page.
 
 Répétez l'opération jusqu'à ce que les 3 outils d'audit ne remontent plus aucune erreur.
+N'hésitez pas à regarder sur internet comment corriger les erreurs ou à solliciter les intervenants.
+
+Une fois les corrections apportées vous pouvez réactiver le lecteur d'écran. L'expérience de navigation au clavier devrait être plus agréable et vous devriez réussir à vous connecter.
 
 ## Blog : à l'aveugle
-Duration: 30
+Duration: 15
 
 Vous allez à présent vous mettre à la place d'une personne non-voyante naviguant sur un blog.
 
@@ -188,24 +194,27 @@ Activer l'extension ***Screen Reader**.
 
 ### Accédez à la page de blog
 
-Dans votre navigateur accéder à la page de blog.
+Dans votre navigateur accéder à la page de blog `http://127.0.0.1:5555/very-bad-blog.html`.
 
 ### À l'aveugle
 
-Saisissez le masque qui vous a été donné, portez-le et tentez d'accéder à l'article **TO DO** .
-Etant hôté de la vue, vous serez contraint d'utiliser uniquement les touches du clavier : **tabulation**, **entrée**, ...
+Saisissez le masque qui vous a été donné, portez-le et tentez d'accéder à l'article **L'accessibilité, pour les nuls** (vous devez actionner le bouton **Lire la suite** de cet article).
+Etant ôté de la vue, vous serez contraints d'utiliser uniquement les touches du clavier : **tabulation**, **entrée**, ...
 
 C'est parti !
 
 Désactivez le lecteur d'écran quand vous avez réussi.
 
-## Connexion : audits & corrections
+## Blog : audits & corrections
 Duration: 30
 
 Vous allez maintenant rendre cette page beaucoup plus accessible à tous.
 Pour ce faire, lancez les outils d'audit d'accessibilité installés précédemment, identifiez les problèmes et corrigez les directement en modifiant le code de la page.
 
 Répétez l'opération jusqu'à ce que les 3 outils d'audit ne remontent plus aucune erreur.
+N'hésitez pas à regarder sur internet comment corriger les erreurs ou à solliciter les intervenants.
+
+Une fois les corrections apportées vous pouvez réactiver le lecteur d'écran. L'expérience de navigation au clavier devrait être plus agréable et il sera plus aisé d'accéder à l'article **L'accessibilité, pour les nuls**.
 
 ## Pré-requis éco-conception
 Duration: 5
@@ -232,12 +241,16 @@ Pour lancer un audit sur la page entière, cliquez sur le bouton **Lancer l'anal
 Les resultats s'affichent ensuite dans les DevTools.
 
 ## Audit d'éco-conception
+Duration: 20
 
 Testez l'extension GreenIT Analysis sur différents site web et analysez les résultats.
 
 Exemples de site web à analyser :
+- Le projet exemple
+- Le site des instructions du TP
 - IMT Atlantique
 - Ali Express
+- Decathlon
 - ...
 
 Prenez le temps de lire chacune des bonnes pratiques d'éco-conception en cliquant sur chacune d'entre elles.
