@@ -143,7 +143,7 @@ Pour lancer le projet en local, sur votre PC, réalisez les opérations suivante
 Duration: 15
 
 Vous allez à présent vous mettre à la place d'une personne non-voyante utilisant un site internet.
-Vous allez avoir à remplir le formulaire du connexion du projet exemple (utilisateur + mot de passe) et vous tenterez de vous connecter. Puisque vous ne verez pas l'écran, vous serez guidé par le lecteur d'écran.
+Vous allez avoir à remplir le formulaire de connexion du projet exemple (utilisateur + mot de passe) et vous tenterez de vous connecter. Puisque vous ne verez pas l'écran, vous serez guidé par le lecteur d'écran.
 
 ### Activez le lecteur d'écran
 
