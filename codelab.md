@@ -134,7 +134,7 @@ Récupérez le .zip puis dézippez le dans le répertoire de votre choix sur vot
 
 Pour lancer le projet en local, sur votre PC, réalisez les opérations suivantes :
 - ouvrez le projet dans VS Code
-- dans les sources du projet, faites un **clic droit** sur le fichier **index.html** et choisissez **Open with Five Server**.
+- dans les sources du projet, faites un **clic droit** sur le fichier **index.html** et choisissez **Open with Live Server**.
 - un nouvel onglet Chrome devrait s'ouvrir sur l'adresse suivante : **http://127.0.0.1:5555/index.html**
 
 
