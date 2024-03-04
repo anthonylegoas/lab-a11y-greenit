@@ -14,7 +14,12 @@ Duration: 1
 - Corriger certaines erreurs d'accessibilité
 - Identifier des problèmes d'éco-conception via des outils d'audit
 
-## TP n°1
+## Théorie - accessibilité
+Duration: 15
+
+Attendez d'avoir assisté à la partie théorique avant passer à l'étape suivante.
+
+## TP n°1 - Utiliser le lecteur d'écran
 Duration: 20min
 
 Ce TP a pour objectif de vous mettre en situation de non-voyant naviguant sur le web et essayant de réaliser des tâches "simples" pour tout autre utilisateur du web.
@@ -37,8 +42,11 @@ Suivez scrupulesement les intructions suivantes pour être sûr de pouvoir réal
 
 ### Google Chrome
 
-Vous aurez besoin du navigateur web Google Chrome pour réaliser les exercices car c'est au travers d'extensions Google Chrome que vous pourrez tester un lecteur d'écran et que vous pourrez mener des audits d'accessibilité.
+Vous aurez besoin du navigateur web Google Chrome pour réaliser les exercices car c'est au travers d'extensions Google Chrome que vous pourrez utiliser des outils d'audits d'accessibilité.
+À noter qu'il existe également des extensions similaires pour les autres navigateurs.
+
 Si vous ne l'avez pas sur votre PC, rendez-vous [ici](https://www.google.com/intl/fr/chrome) pour l'installer.
+
 
 ### Lighthouse
 
@@ -109,6 +117,11 @@ Duration: 15
 - Utilisez les outils d'audit installés précédemment pour auditer le site de l'IMT Atlantique'.
 - Vous pouvez mener des audits sur différentes pages du site.
 - Identifiez les pistes d'amélioration pour une meilleure accessibilité du site.
+
+## Théorie - éco-conception
+Duration: 15
+
+Attendez d'avoir assisté à la partie théorique avant passer à l'étape suivante.
 
 ## Pré-requis éco-conception
 Duration: 5
