@@ -39,12 +39,21 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Pré-requis accessibilité" duration="15">
+      <google-codelab-step label="TP n°1" duration="0">
+        <p>Ce TP a pour objectif de vous mettre en situation de non-voyant naviguant sur le web et essayant de réaliser des tâches &#34;simples&#34; pour tout autre utilisateur du web.</p>
+<ul>
+<li>Rendez-vous sur le site de la FNAC https://www.fnac.com/</li>
+<li>Activez le lecteur d&#39;écran de votre ordinateur (voir https://dequeuniversity.com/screenreaders/)</li>
+<li>Fermez les yeux et tentez de commander le livre &#34;A11Y Unraveled&#34; uniquement grâce au lecteur d&#39;écran</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Pré-requis audit d&#39;accessibilité" duration="15">
         <h2 is-upgraded>Outils nécessaires pour réaliser les exercices</h2>
 <ul>
 <li>Google Chrome</li>
-<li>VSCode</li>
-<li>VSCode Live Server</li>
 <li>Lighthouse</li>
 <li>Wave</li>
 <li>Axe DevTools</li>
@@ -52,13 +61,6 @@
 <p>Suivez scrupulesement les intructions suivantes pour être sûr de pouvoir réaliser les exercices sans rencontrer de problème.</p>
 <h2 is-upgraded>Google Chrome</h2>
 <p>Vous aurez besoin du navigateur web Google Chrome pour réaliser les exercices car c&#39;est au travers d&#39;extensions Google Chrome que vous pourrez tester un lecteur d&#39;écran et que vous pourrez mener des audits d&#39;accessibilité. Si vous ne l&#39;avez pas sur votre PC, rendez-vous <a href="https://www.google.com/intl/fr/chrome" target="_blank">ici</a> pour l&#39;installer.</p>
-<h2 is-upgraded>VS Code</h2>
-<p>Une fois les problèmes d&#39;accessibilité identifiés, vous aurez à les corriger en modifiant le code du projet dans VS Code. Vous pouvez télécharger VS Code <a href="https://code.visualstudio.com/download" target="_blank">ici</a>.</p>
-<h2 is-upgraded>VS Code Live Server</h2>
-<p>Pour pouvoir lancer le projet qui servira d&#39;exemple et mener des audits d&#39;accessibilité, il est nécessaire d&#39;installer l&#39;extension VS Code Live Server. Pour ce faire, commencez par lancer VS Code. Ensuite, dans le menu de gauche de VS Code, sélectionnez l&#39;onglet <strong>Extensions</strong>.</p>
-<p class="image-container"><img alt="onglet extensions vs code" src="img/c923b3b7c0d609f.png"></p>
-<p>Dans la barre de recherche, saisissez <strong>Live Server</strong> et installez la première extension proposée.</p>
-<p class="image-container"><img alt="extension live server" src="img/52a54181ff2dc48f.png"></p>
 <h2 is-upgraded>Lighthouse</h2>
 <p>Lighthouse est une extension qui permet de mener différents types d&#39;audits sur un site web, incluant notamment un certain nombre de vérifications relatives à l&#39;accessibilité (mais aussi aux performances, aux bonnes pratiques, au SEO et aux PWA).</p>
 <p>Lighthouse est nativement disponible dans Google Chrome. Pour accéder à l&#39;outil, rendez-vous en haut à droite de votre navigateur, sur le menu <strong>Extensions</strong>.</p>
@@ -87,81 +89,26 @@
 <p>Pour lancer un audit sur la page entière, cliquez sur le bouton <code>Scan ALL of my page</code>:</p>
 <p class="image-container"><img alt="audit axe devtools" src="img/81e6b34c138a8aa2.png"></p>
 <p>Les resultats s&#39;affichent ensuite dans les DevTools.</p>
-<h2 is-upgraded>Screen Reader</h2>
-<p>L&#39;extension de navigateur <strong>Screen Reader</strong> est un lecteur d&#39;écran pour navigateur. Un lecteur d&#39;écran est un logiciel d&#39;assistance technique destiné aux personnes « empêchées de lire » (aveugles, fortement malvoyantes, dyslexiques, dyspraxiques...) : il retranscrit par synthèse vocale et/ou sur un afficheur braille ce qui est affiché sur l&#39;écran d&#39;un ordinateur tant en termes de contenu que de structure.</p>
-<p>Vous pouvez ajouter l&#39;extension à Google Chrome à partir du lien suivant : <a href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=fr" target="_blank">Screen Reader</a></p>
-<p>Pour l&#39;activer, il vous faudra ensuite passer par le menu <strong>Extensions</strong> puis <strong>Gérer les extensions</strong> de Google Chrome.</p>
-<p>Attention ! Dès lors que vous activez l&#39;extension, toute action que vous ferez dans votre navigateur risque d&#39;entrainer la prise de parole du lecteur d&#39;écran, donc mettez vos écouteurs.</p>
-<p><img alt="activation du lecteur d&amp;rsquo;écran" src="img/a4ff99e23f1d3b93.png">.</p>
-<p><img alt="activation du lecteur d&amp;rsquo;écran étape 2" src="img/97844acf92273246.png">.</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Projet exemple" duration="5">
-        <p>Vous allez utiliser un projet exemple pour découvrir l&#39;accessibilité par la pratique, en menant des audits avec les outils installés précédement et vous pourrez appliquer des corrections suite aux retours des audits.</p>
-<h2 is-upgraded>Télécharger le projet</h2>
-<p>Le projet exemple est à télécharger sur le lien suivant : <a href="https://wetransfer.com/downloads/2d18dd1ea849d22698521307fcec085720230321003757/f39bf2" target="_blank">https://wetransfer.com/downloads/2d18dd1ea849d22698521307fcec085720230321003757/f39bf2</a></p>
-<p>Récupérez le .zip puis dézippez le dans le répertoire de votre choix sur votre PC.</p>
-<h2 is-upgraded>Lancer le projet en local</h2>
-<p>Pour lancer le projet en local, sur votre PC, réalisez les opérations suivantes :</p>
-<ul>
-<li>ouvrez le projet dans VS Code</li>
-<li>dans les sources du projet, faites un <strong>clic droit</strong> sur le fichier <strong>index.html</strong> et choisissez <strong>Open with Live Server</strong>.</li>
-<li>un nouvel onglet Chrome devrait s&#39;ouvrir sur l&#39;adresse suivante : <strong>http://127.0.0.1:5555/index.html</strong></li>
+      <google-codelab-step label="TP n°2 - Audit a11y FNAC" duration="15">
+        <ul>
+<li>Utilisez les outils d&#39;audit installés précédemment pour auditer le site de la FNAC.</li>
+<li>Vous pouvez mener des audits sur différentes pages du site.</li>
+<li>Identifiez les pistes d&#39;amélioration pour une meilleure accessibilité du site.</li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Connexion : à l&#39;aveugle" duration="15">
-        <p>Vous allez à présent vous mettre à la place d&#39;une personne non-voyante utilisant un site internet. Vous allez avoir à remplir le formulaire de connexion du projet exemple (utilisateur + mot de passe) et vous tenterez de vous connecter. Puisque vous ne verez pas l&#39;écran, vous serez guidé par le lecteur d&#39;écran.</p>
-<h2 is-upgraded>Activez le lecteur d&#39;écran</h2>
-<p>Mettez vos écouteurs ou votre casque pour ne pas gêner vos voisins.</p>
-<p>Activer l&#39;extension <strong>Screen Reader</strong>.</p>
-<h2 is-upgraded>Accédez à la page de connexion</h2>
-<p>Dans votre navigateur accéder à la page de connexion du projet.</p>
-<h2 is-upgraded>À l&#39;aveugle</h2>
-<p>Saisissez le masque qui vous a été donné, portez-le et essayez de vous connecter. Etant ôté de la vue, vous serez contraints d&#39;utiliser uniquement les touches du clavier : <strong>tabulation</strong>, <strong>entrée</strong>, ...</p>
-<p>Les identifiants de connexion sont les suivants :</p>
-<ul>
-<li>Utilisateur : <code>Specimen29</code></li>
-<li>Mot de passe : <code>SuPer@ccEssIblE!</code></li>
+      <google-codelab-step label="TP n°3 - Audit a11y IMT Atlantique" duration="15">
+        <ul>
+<li>Utilisez les outils d&#39;audit installés précédemment pour auditer le site de l&#39;IMT Atlantique&#39;.</li>
+<li>Vous pouvez mener des audits sur différentes pages du site.</li>
+<li>Identifiez les pistes d&#39;amélioration pour une meilleure accessibilité du site.</li>
 </ul>
-<p>C&#39;est parti !</p>
-<p>Désactivez le lecteur d&#39;écran quand vous avez réussi.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Connexion : audits &amp; corrections" duration="30">
-        <p>Vous l&#39;aurez-vu avec le lecteur d&#39;écran, le formulaire de connexion n&#39;est pas accessible du tout, impossible de se connecter en utilisant seulement son clavier.</p>
-<p>Vous allez maintenant rendre cette page beaucoup plus accessible à tous. Pour ce faire, lancez les outils d&#39;audit d&#39;accessibilité installés précédemment, identifiez les problèmes et corrigez les directement en modifiant le code de la page.</p>
-<p>Répétez l&#39;opération jusqu&#39;à ce que les 3 outils d&#39;audit ne remontent plus aucune erreur. N&#39;hésitez pas à regarder sur internet comment corriger les erreurs ou à solliciter les intervenants.</p>
-<p>Une fois les corrections apportées vous pouvez réactiver le lecteur d&#39;écran. L&#39;expérience de navigation au clavier devrait être plus agréable et vous devriez réussir à vous connecter.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Blog : à l&#39;aveugle" duration="15">
-        <p>Vous allez à présent vous mettre à la place d&#39;une personne non-voyante naviguant sur un blog.</p>
-<h2 is-upgraded>Activez le lecteur d&#39;écran</h2>
-<p>Mettez vos écouteurs ou votre casque pour ne pas gêner vos voisins.</p>
-<p>Activer l&#39;extension *<strong>Screen Reader</strong>.</p>
-<h2 is-upgraded>Accédez à la page de blog</h2>
-<p>Dans votre navigateur accéder à la page de blog <code>http://127.0.0.1:5555/very-bad-blog.html</code>.</p>
-<h2 is-upgraded>À l&#39;aveugle</h2>
-<p>Saisissez le masque qui vous a été donné, portez-le et tentez d&#39;accéder à l&#39;article <strong>L&#39;accessibilité, pour les nuls</strong> (vous devez actionner le bouton <strong>Lire la suite</strong> de cet article). Etant ôté de la vue, vous serez contraints d&#39;utiliser uniquement les touches du clavier : <strong>tabulation</strong>, <strong>entrée</strong>, ...</p>
-<p>C&#39;est parti !</p>
-<p>Désactivez le lecteur d&#39;écran quand vous avez réussi.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Blog : audits &amp; corrections" duration="30">
-        <p>Vous allez maintenant rendre cette page beaucoup plus accessible à tous. Pour ce faire, lancez les outils d&#39;audit d&#39;accessibilité installés précédemment, identifiez les problèmes et corrigez les directement en modifiant le code de la page.</p>
-<p>Répétez l&#39;opération jusqu&#39;à ce que les 3 outils d&#39;audit ne remontent plus aucune erreur. N&#39;hésitez pas à regarder sur internet comment corriger les erreurs ou à solliciter les intervenants.</p>
-<p>Une fois les corrections apportées vous pouvez réactiver le lecteur d&#39;écran. L&#39;expérience de navigation au clavier devrait être plus agréable et il sera plus aisé d&#39;accéder à l&#39;article <strong>L&#39;accessibilité, pour les nuls</strong>.</p>
 
 
       </google-codelab-step>
@@ -184,13 +131,12 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Audit d&#39;éco-conception" duration="20">
+      <google-codelab-step label="TP n°4 - Audit d&#39;éco-conception" duration="20">
         <p>Testez l&#39;extension GreenIT Analysis sur différents site web et analysez les résultats.</p>
 <p>Exemples de site web à analyser :</p>
 <ul>
-<li>Le projet exemple</li>
-<li>Le site des instructions du TP</li>
 <li>IMT Atlantique</li>
+<li>FNAC</li>
 <li>Ali Express</li>
 <li>Decathlon</li>
 <li>...</li>
