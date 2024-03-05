@@ -123,6 +123,13 @@ Duration: 15
 
 Attendez d'avoir assisté à la partie théorique avant passer à l'étape suivante.
 
+## TP n°4 - Mesurer votre impact carbone lié au numérique
+Duration: 10
+
+Rendez-vous sur le site https://impactco2.fr/usagenumerique et :
+- mesurez votre impact carbone personnel
+- jouez avec les différents indicateurs (mail, streaming, visio) pour comprendre leur impact
+
 ## Pré-requis éco-conception
 Duration: 5
 
@@ -147,7 +154,7 @@ Pour lancer un audit sur la page entière, cliquez sur le bouton **Lancer l'anal
 
 Les resultats s'affichent ensuite dans les DevTools.
 
-## TP n°4 - Audit d'éco-conception
+## TP n°5 - Audit d'éco-conception
 Duration: 20
 
 Testez l'extension GreenIT Analysis sur différents site web et analysez les résultats.
